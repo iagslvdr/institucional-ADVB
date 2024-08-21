@@ -17,11 +17,6 @@
     
 }
 
-.footer{
-    margin-bottom: 0;
-    margin-top: 10vh;
-}
-
 .imagens-area5 {
     margin: 5px;
     width: 100%;
@@ -60,3 +55,7 @@
     position: relative;
 }
 
+.footerevento {
+    position: fixed;
+    bottom: 0;
+}
