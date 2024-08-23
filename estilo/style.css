@@ -298,3 +298,50 @@ p {
   margin-right: 18;
   margin-top: 2%;
 }
+
+.link {
+    justify-content: center;
+    
+}
+
+.tecnologiasUnifebe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.techeye{
+  text-align: center;
+  padding: 0;
+  margin: 15px;
+}
+
+#logotecheye{
+  width: 202px;
+  height: 109px;
+}
+
+.colortalk {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+}
+
+.Chromex {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+}
+
+.Chromex img {
+  float: right;
+  width: 133px;
+  height: 131px;
+
+}
