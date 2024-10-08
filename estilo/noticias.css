@@ -1,84 +1,65 @@
-.secao-noticia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 40px;
+.img-noticia {
+  width: 600px;
+  height: 500px;
 }
 
-.secao-noticia h1 {
-  font-size: 60px;
-}
-
-.carousel {
-  width: 76rem;
-  height: 46rem;
+.noticia {
   position: relative;
-  border: solid 10px #fff;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 10vh;
 }
 
-.casousel-item {
+.noticia-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.noticia-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.button-noticia {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 25px 50px;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-.carousel h1 {
-  color: black;
-  margin-top: 36rem;
-}
-.arrow {
-  border: solid #fff;
-  border-width: 0 6px 6px 0;
-  display: inline-block;
-  padding: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .prev {
-  top: 50%;
-  left: 30px;
-  position: absolute;
-  transform: translateY(-50%) rotate(135deg);
+  left: 0;
 }
 
 .next {
-  top: 50%;
-  right: 30px;
-  position: absolute;
-  transform: translateY(-50%) rotate(-45deg);
+  right: 0;
 }
-
-[id^="item"] {
-  display: none;
+.texto-noticia {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center, justify;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  word-spacing: 0%;
+  margin-top: -100px;
 }
+.transparent-bg {
+  background-color: rgba(0, 156, 21, 0.35);
+  /* fundo branco com 25% de opacidade */
+  padding: 10px;
+  /* adicione preenchimento conforme necessário */
+  position: relative;
+  width: 400px;
 
-.item-1 {
-  z-index: 2;
-  opacity: 1;
-  background: url("/img/noticia1.jpg");
-  background-size: cover;
-}
-
-.item-2 {
-  background: url("/img/noticia2.jpg");
-  background-size: cover;
-}
-
-.item-3 {
-  background: url("/img/noticia3.jpg");
-  background-size: cover;
-}
-
-*:target ~ .item-1 {
-  opacity: 1;
-}
-
-#item-2:target ~ .item-2,
-#item-3:target ~ .item-3 {
-  z-index: 3;
-  opacity: 1;
+  margin-right: auto;
+  margin-left: auto;
+  /* necessário para efeitos adicionais */
 }

@@ -5,9 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADBV Brusque</title>
+
     <link rel="stylesheet" href="./estilo/style.css">
-    <link rel="short icon" href="img/fav.png">
     <link rel="stylesheet" href="./estilo/noticias.css">
+    <link rel="short icon" href="img/fav.png">
+    <style>
+        footer {
+            position: absolute;
+            bottom: 0;
+            background-color: #28703c;
+            float: left;
+            width: 100%;
+        }
+    </style>
     <script src="script.js"></script>
 </head>
 
@@ -38,31 +48,24 @@
             <li><img src="img/Instagram.png" alt="logo_insta" height="25px"></li>
         </ul>
     </header>
-    <div class="secao-noticia">
-        <h1>Noticias ADVB</h1>
-        <div class="carousel">
-
-            <span id="item-1"></span>
-            <span id="item-2"></span>
-            <span id="item-3"></span>
-
-            <div class="casousel-item item-1">
-                <h1>NOTICIA 1</h1>
-                <a href="#item-3" class="prev arrow"></a>
-                <a href="#item-2" class="next arrow"></a>
+    <div class="noticia">
+        <div class="noticia-inner">
+            <div class="noticia-item active">
+                <img src="img/noticia1.jpg" class="img-noticia">
+                <p class="texto-noticia transparent-bg">Resumo da notícia 1.</p>
             </div>
-            <div class="casousel-item item-2">
-                <h1>NOTICIA 2</h1>
-                <a href="#item-1" class="prev arrow"></a>
-                <a href="#item-3" class="next arrow"></a>
+            <div class="noticia-item">
+                <img src="img/noticia2.jpg" class="img-noticia">
+                <p class="texto-noticia transparent-bg">Resumo da notícia 2.</p>
             </div>
-            <div class="casousel-item item-3">
-                <h1>NOTICIA 3</h1>
-                <a href="#item-2" class="prev arrow"></a>
-                <a href="#item-1" class="next arrow"></a>
+            <div class="noticia-item">
+                <img src="img/noticia3.jpg" class="img-noticia">
+                <p class="texto-noticia transparent-bg">Resumo da notícia 3.</p>
             </div>
 
         </div>
+        <button class="prev button-noticia" onclick="movenoticiaNoticia(-1)">❮</button>
+        <button class="next button-noticia" onclick=" movenoticiaNoticia(1)">❯</button>
     </div>
 
     <footer>
@@ -81,6 +84,22 @@
             </ul>
         </div>
     </footer>
+    <script>
+        let currentSlide = 0;
+
+        function movenoticiaNoticia(direction) {
+            const items = document.querySelectorAll('.noticia-item');
+            currentSlide = (currentSlide + direction + items.length) % items.length;
+            document.querySelector('.noticia-inner').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function autoSlide() {
+            movenoticiaNoticia(1);
+            setTimeout(autoSlide, 4000);
+        }
+
+        setTimeout(autoSlide, 4000);
+    </script>
 </body>
 
 </html>
