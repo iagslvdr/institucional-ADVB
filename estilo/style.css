@@ -125,15 +125,14 @@ footer {
   text-align: justify;
 }
 .green-box {
-  background-color: #28703c;
-  width: 630px;
+  width: 600px;
   height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 20px;
-  color: #ffffff;
+  color: #000000;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -210,8 +209,10 @@ p {
   display: table;
 }
 .arq {
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  
 }
 #corpo {
   margin: 50px 150px;
